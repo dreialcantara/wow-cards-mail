@@ -4,6 +4,8 @@ import TestHtml from '../src/components/TestHtml'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
+import Loading from '../src/components/Loading';
+
 import "./App.css"
 
 export default function App() {
@@ -17,6 +19,8 @@ export default function App() {
   const [fromEmail] = useState("");
   const [fromName, setFromName] = useState("");
   const [titulo, setTitulo] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false)
 
 
 
@@ -52,12 +56,12 @@ export default function App() {
       }
   
       a[x-apple-data-detectors] {
-        color: inherit !important;
+        color: #2d5551 !important;
         text-decoration: inherit !important;
       }
   
       #MessageViewBody a {
-        color: inherit;
+        color: #2d5551;
         text-decoration: none;
       }
   
@@ -132,14 +136,14 @@ export default function App() {
                             <table class="heading_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                               <tr>
                                 <td class="pad" style="text-align:center;width:100%;padding-top:60px;">
-                                  <h1 style="margin: 0; color: #031900; direction: ltr; font-family: Helvetica, Helvetica Neue, Helvetica, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder">${titulo}</span></h1>
+                                  <h1 style="margin: 0; color:#003c3b ; direction: ltr; font-family: Helvetica, Helvetica Neue, Helvetica, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder">${titulo}</span></h1>
                                 </td>
                               </tr>
                             </table>
                             <table class="paragraph_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
                               <tr>
                                 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:justify;mso-line-height-alt:19.2px;">
+                                  <div style="color:#003c3b;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:justify;mso-line-height-alt:19.2px;">
                                     <p style="margin: 0;">${message}</p>
                                   </div>
                                 </td>
@@ -148,7 +152,7 @@ export default function App() {
                             <table class="paragraph_block block-5" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
                               <tr>
                                 <td class="pad">
-                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:15px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:16.8px;">
+                                  <div style="color:#003c3b;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:15px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:16.8px;">
                                     <p style="margin: 0;">&nbsp; &nbsp; &nbsp;Abraços, ${fromName} da Manual!&nbsp;</p>
                                   </div>
                                 </td>
@@ -236,13 +240,19 @@ export default function App() {
     e.preventDefault();
 
     emailjs.send('service_26q3uhg', 'template_i0zxgbl', sendParams, 'al70E8s8MFY9LLhTe')
-      .then((result) => {
-        console.log(result.text);
-        alert("E-mail Enviado")
-      }, (error) => {
-        console.log(error.text);
-        alert("Houve um erro no envio")
-      });
+
+      .then(
+
+        (result) => {
+          console.log(result.text);
+          alert("E-mail Enviado");
+
+        }, (error) => {
+          setIsLoading(false);
+          console.log(error.text);
+          alert("Houve um erro no envio");
+
+        });
   };
 
   return (
@@ -288,7 +298,8 @@ export default function App() {
             <option value={cardResultado}>Resultado</option>
           </select>
 
-          <div className='mt-3 w-100 d-flex justify-content-center'><input className='mr-2 botoes rounded-4 mt-3 w-25 align-self-center' type="submit" value="Enviar" />
+          {isLoading ? <Loading /> : <div className='mt-3 w-100 d-flex justify-content-center'>
+            <input className='mr-2 botoes rounded-4 mt-3 w-25 align-self-center' type="submit" value="Enviar" />
             <input onClick={(event) => {
               setName("");
               setEmail("");
@@ -296,7 +307,7 @@ export default function App() {
               setTitulo("");
               setMessage("");
             }} className='botoes rounded-4 mt-3 w-25 align-self-center' type="reset" value="Limpar" />
-          </div>
+          </div>}
         </form>
       </Container></body>
   );
