@@ -238,12 +238,13 @@ export default function App() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     emailjs.send('service_26q3uhg', 'template_i0zxgbl', sendParams, 'al70E8s8MFY9LLhTe')
 
       .then(
 
         (result) => {
+          setIsLoading(false);
           console.log(result.text);
           alert("E-mail Enviado");
 
