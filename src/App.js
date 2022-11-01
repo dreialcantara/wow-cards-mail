@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import TestHtml from '../src/components/TestHtml'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import Loading from '../src/components/Loading';
 
@@ -31,7 +33,6 @@ export default function App() {
 
   const [cardBg, setCardBg] = useState(cardAtendimento);
 
-  const manualogo = require("../src/img/manuallogo.png");
 
 
   const sendParams = {
@@ -237,6 +238,31 @@ export default function App() {
   }
 
   const sendEmail = (e) => {
+    const notify = () =>
+      toast.error("Houve um erro no envio", {
+        position: "top-center",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+    const notifySuccess = () =>
+      toast.success("E-mail com o card enviado!", {
+        position: "top-center",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+
     e.preventDefault();
     setIsLoading(true);
     emailjs.send('service_26q3uhg', 'template_i0zxgbl', sendParams, 'al70E8s8MFY9LLhTe')
@@ -246,19 +272,19 @@ export default function App() {
         (result) => {
           setIsLoading(false);
           console.log(result.text);
-          alert("E-mail Enviado");
+          notifySuccess();
 
         }, (error) => {
           setIsLoading(false);
           console.log(error.text);
-          alert("Houve um erro no envio");
-
+          notify();
         });
   };
 
   return (
-    <body>
 
+    <body>
+      <ToastContainer transition={Slide} />
 
 
       <Container className='mt-0 d-flex justify-content-center '>
