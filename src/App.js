@@ -25,7 +25,7 @@ export default function App() {
   const cardResultado = "https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/890277_874524/editor_images/3e04a3b3-94b1-4fe1-81b5-483654387a07.png"
   const cardAtendimento = "https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/890277_874524/editor_images/30e2e3ca-58cd-486b-8a95-fe93313ed02c.png"
 
-  const [cardBg, setCardBg] = useState();
+  const [cardBg, setCardBg] = useState(cardAtendimento);
 
   const manualogo = require("../src/img/manuallogo.png");
 
@@ -139,7 +139,7 @@ export default function App() {
                             <table class="paragraph_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
                               <tr>
                                 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:center;mso-line-height-alt:19.2px;">
+                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:justify;mso-line-height-alt:19.2px;">
                                     <p style="margin: 0;">${message}</p>
                                   </div>
                                 </td>
@@ -205,8 +205,7 @@ export default function App() {
                                         <table class="icons-inner" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;" cellpadding="0" cellspacing="0" role="presentation">
                                           <!--<![endif]-->
                                           <tr>
-                                            <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/" target="_blank" style="text-decoration: none;"><img class="icon" alt="Designed with BEE" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/53601_510656/Signature/bee.png" height="32" width="34" align="center" style="display: block; height: auto; margin: 0 auto; border: 0;"></a></td>
-                                            <td style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/" target="_blank" style="color: #9d9d9d; text-decoration: none;">Designed with BEE</a></td>
+                                            <td style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/" target="_blank" style="color: #9d9d9d; text-decoration: none;"></a></td>
                                           </tr>
                                         </table>
                                       </td>
