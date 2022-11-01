@@ -21,18 +21,19 @@ h1 {
 
 .botoes {
   border: none;
-  background-color: rgb(11, 101, 59);
+  background-color: #0b3b3b;
   color: white;
+  height: 37px;
 }
 
 .botoes:hover {
   border: 2px green;
-  background-color: #198754;
-
+  background-color: rgb(11, 101, 59)
 }
 
 .message {
   height: 110px;
+  resize: none;
 }
 
 form {
@@ -44,4 +45,9 @@ form {
 
 .logomanual {
   width: 100px;
+}
+
+.cardicone {
+  margin-right: 80px !important;
+  border-radius: 20px;
 }

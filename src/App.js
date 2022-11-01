@@ -296,7 +296,7 @@ export default function App() {
             onChange={(event) => {
               setName(event.target.value);
             }} type="text" required />
-          <label className="mt-4">Título do Card</label>
+          <label className="mt-3">Título do Card</label>
           <input className="w-50" value={titulo}
             onChange={(event) => {
               setTitulo(event.target.value);
@@ -318,7 +318,7 @@ export default function App() {
               setMessage(event.target.value);
             }} name="message" required />
 
-          <div className='d-flex align-items-center justify-content-evenly'>
+          <div className='d-flex align-items-center justify-content-between'>
             <div className='w-50'> <label className="mt-3" for="exampleFormControlSelect1">Card WOW</label>
               <select role="button" className="form-control w-100" id="exampleFormControlSelect1" onChange={(event) => { setCardBg(event.target.value); console.log(cardBg) }}>
                 <option value={cardAtendimento}>Atendimento</option>
@@ -326,7 +326,7 @@ export default function App() {
                 <option value={cardCaixa}>Caixa</option>
                 <option value={cardResultado}>Resultado</option>
               </select></div>
-            <img src={cardBg} alt='' className='w-25 mt-4' /></div>
+            <img src={cardBg} alt='' className='cardicone w-25 mt-4' /></div>
 
           {isLoading ? <Loading /> : <div className='mt-3 w-100 d-flex justify-content-center'>
             <input className='mr-2 botoes rounded-4 mt-3 w-25 align-self-center' type="submit" value="Enviar" />
