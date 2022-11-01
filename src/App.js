@@ -290,23 +290,23 @@ export default function App() {
       <Container className='mt-0 d-flex justify-content-center '>
 
         <form className='bg-white w-75 d-flex flex-column p-4' ref={form} onSubmit={sendEmail}>
-          <h1 className='mt-3 mb-3 w-100 text-center'>WOW Card Form</h1>
+          <h1 className='mt-3 mb-3 w-100 text-center'>Fábrica de WOW Card </h1>
           <label className="">Nome do Cliente</label>
           <input className="w-50" value={name}
             onChange={(event) => {
               setName(event.target.value);
             }} type="text" required />
-          <label className="mt-4">Título do card</label>
+          <label className="mt-4">Título do Card</label>
           <input className="w-50" value={titulo}
             onChange={(event) => {
               setTitulo(event.target.value);
             }} type="text" maxLength={36} required />
-          <label className="mt-3">E-mail do agente</label>
+          <label className="mt-3">E-mail do Agente</label>
           <input className="w-50" value={email}
             onChange={(event) => {
               setEmail(event.target.value);
             }} type="email" required />
-          <label className="mt-3">Nome do agente</label>
+          <label className="mt-3">Nome do Agente</label>
           <input className="w-50" value={fromName}
             onChange={(event) => {
               setFromName(event.target.value);
@@ -317,13 +317,16 @@ export default function App() {
             onChange={(event) => {
               setMessage(event.target.value);
             }} name="message" required />
-          <label className="mt-3" for="exampleFormControlSelect1">Card WOW</label>
-          <select role="button" className="form-control w-50" id="exampleFormControlSelect1" onChange={(event) => { setCardBg(event.target.value); console.log(cardBg) }}>
-            <option value={cardAtendimento}>Atendimento</option>
-            <option value={cardEntrega}>Entrega</option>
-            <option value={cardCaixa}>Caixa</option>
-            <option value={cardResultado}>Resultado</option>
-          </select>
+
+          <div className='d-flex align-items-center justify-content-evenly'>
+            <div className='w-50'> <label className="mt-3" for="exampleFormControlSelect1">Card WOW</label>
+              <select role="button" className="form-control w-100" id="exampleFormControlSelect1" onChange={(event) => { setCardBg(event.target.value); console.log(cardBg) }}>
+                <option value={cardAtendimento}>Atendimento</option>
+                <option value={cardEntrega}>Entrega</option>
+                <option value={cardCaixa}>Caixa</option>
+                <option value={cardResultado}>Resultado</option>
+              </select></div>
+            <img src={cardBg} alt='' className='w-25 mt-4' /></div>
 
           {isLoading ? <Loading /> : <div className='mt-3 w-100 d-flex justify-content-center'>
             <input className='mr-2 botoes rounded-4 mt-3 w-25 align-self-center' type="submit" value="Enviar" />

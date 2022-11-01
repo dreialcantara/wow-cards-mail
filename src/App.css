@@ -1,8 +1,7 @@
-* {}
-
 body {
   background-color: #0b3b3b;
   background-image: url("../src/img/manuallogo.png");
+  background-size: 112px;
 }
 
 label {
