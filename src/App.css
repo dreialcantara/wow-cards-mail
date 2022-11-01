@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+* {}
+
+body {
+  background-color: #0b3b3b;
+  background-image: url("../src/img/manuallogo.png");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  color: rgb(3, 78, 3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #0b3b3b;
+  ;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 46px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.botoes {
+  border: none;
+  background-color: rgb(11, 101, 59);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.botoes:hover {
+  border: 2px green;
+  background-color: #198754;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  height: 110px;
+}
+
+form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(11, 101, 59);
+  border-radius: 2%;
+}
+
+.logomanual {
+  width: 100px;
 }
