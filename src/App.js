@@ -291,28 +291,30 @@ export default function App() {
 
         <form className='bg-white w-75 d-flex flex-column p-4' ref={form} onSubmit={sendEmail}>
           <h1 className='mt-3 mb-3 w-100 text-center'>Fábrica de WOW Card </h1>
-          <label className="">Nome do Cliente</label>
-          <input className="w-50" value={name}
+          <div className='d-flex justify-content-between'><div className='w-50'><label className="">Nome do Cliente</label>
+          <input className="w-100" value={name}
             onChange={(event) => {
               setName(event.target.value);
             }} type="text" required />
           <label className="mt-3">Título do Card</label>
-          <input className="w-50" value={titulo}
+          <input className="w-100" value={titulo}
             onChange={(event) => {
               setTitulo(event.target.value);
             }} type="text" maxLength={36} required />
           <label className="mt-3">E-mail do Agente</label>
-          <input className="w-50" value={email}
+          <input className="w-100" value={email}
             onChange={(event) => {
               setEmail(event.target.value);
             }} type="email" required />
           <label className="mt-3">Nome do Agente</label>
-          <input className="w-50" value={fromName}
+          <input className="w-100" value={fromName}
             onChange={(event) => {
               setFromName(event.target.value);
-            }} type="text" name='fromName' required />
-          <label className="mt-3">Texto do Card</label>
-          <textarea className="message" value={message}
+            }} type="text" name='fromName' required /></div>
+          <img className='logoverde align-self-center'src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMzgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwLjcyMSAzNS42MTFjLS42NzkgMC0xLjEwMy0uNTE1LTEuMTAzLTEuMzU4IDAtMy45ODUgNy45MDYtMTMuMDM2IDE1Ljc5My0yMC43MDgtMS4zMzMgOC42MTYtMTAuMTQ1IDIyLjA2Ni0xNC42OSAyMi4wNjZNMzkuMDI0LjAwM2MtMS4wODUuMDI2LTMuMzEyLjExLTUuMjY1LjEzOC0uNjg3LjAxLS45NjEuMzE5LS44NzMuNzYyLjEwMy41MjIuNDQ3LjkwOS45NjUuOTIyLjY2Ny4wMTggMS41Ni0uMDkzIDIuNzA1LS4xNS0yLjYwMyAyLjAwMy01Ljc1MiA0LjYzNS05LjAwMSA3LjU2NC0uMzgyLTIuOTQ3LTEuNzQ4LTUuMzAzLTQuNDM1LTUuMzAzLTMuOTA3IDAtNy44MTMgNS45NDUtOS41MTEgOS4yNTYtLjE3LTIuNzE3LTEuMzU5LTUuMjY1LTMuOTA3LTUuMjY1QzQuNDA2IDcuOTI3IDAgMTkuOTggMCAyMS43ODRjMCAuNjE2LjcwNSAxLjA5IDEuMTMgMS4wOS41MSAwIC42NzUtLjI1NS44NDUtLjg1IDIuMjA4LTcuMjE4IDUuNTItMTIuMjI4IDcuNzI3LTEyLjIyOCAxLjEwNCAwIDEuOTU0IDEuMjczIDEuOTU0IDQuMjQ2IDAgMi4xODYtLjM3MyAzLjUxNC0uMzczIDQuMDMyIDAgLjgxLjcxMiAxLjIzMyAxLjEzNyAxLjIzMy41MSAwIC42OC0uMjU1LjkzNC0uODUgMi41NDgtNi4yODQgNi43MDktMTIuNTY4IDkuNjgtMTIuNTY4IDEuNDY0IDAgMi40NiAxLjg3IDIuNTQyIDUuMTYtOC45MSA4LjI2Ny0xNy44ODkgMTguMjMtMTcuODg5IDIzLjEzIDAgMi4wNCAxLjEyNSAzLjIxNiAyLjk1IDMuMjE2IDYuNTUxIDAgMTYuODA0LTE2LjI4MyAxNy4wMjgtMjYuMDA2IDMuNjQ1LTMuNDMgNy4xMjItNi40MjYgOS42MjQtOC4zMzItLjM4Ni45NTYtLjc3NCAxLjg4Ni0uOTcxIDIuNTgtLjE0NS41MDctLjA1NyAxLjA2NS41NjcgMS4zMDguMzk1LjE1My43NDYtLjA3LjktLjUxLjk0MS0yLjY4MyAxLjQyNS0zLjc4MyAyLTUuMzE4LjM3Ny0xLjAwNC4zMzYtMS4xNC0uNzYtMS4xMTQiIGZpbGw9IiMwQjNCM0MiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==' alt=''/>
+          </div>
+         <div className=' mt-5'> <label className="mt-3">Texto do Card</label></div>
+          <textarea className="w-100 message" value={message}
             maxLength={360}
             onChange={(event) => {
               setMessage(event.target.value);

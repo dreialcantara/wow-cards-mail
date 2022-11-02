@@ -1,7 +1,7 @@
 body {
   background-color: #0b3b3b;
   background-image: url("../src/img/manuallogo.png");
-  background-size: 112px;
+  background-size: 230px;
 }
 
 label {
@@ -50,4 +50,10 @@ form {
 .cardicone {
   margin-right: 80px !important;
   border-radius: 20px;
+}
+
+.logoverde {
+  width: 150px;
+  height: 150px;
+  margin-right: 140px !important;
 }
