@@ -57,3 +57,12 @@ form {
   height: 150px;
   margin-right: 140px !important;
 }
+
+@media (max-width: 1200px) {
+  .logoverde { display: none;}
+
+  .forminput{
+    width: 100% !important;
+  }
+  .cardicone{display: none;}
+}
