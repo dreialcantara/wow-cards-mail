@@ -57,12 +57,12 @@ export default function App() {
       }
   
       a[x-apple-data-detectors] {
-        color: inherit !important;
+        color: #2d5551 !important;
         text-decoration: inherit !important;
       }
   
       #MessageViewBody a {
-        color: inherit;
+        color: #2d5551;
         text-decoration: none;
       }
   
@@ -122,7 +122,7 @@ export default function App() {
   </head>
   
   <body style="background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
-    <table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; background-image: url('https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/890277_874524/editor_images/3e04a3b3-94b1-4fe1-81b5-483654387a07.png'); background-position: top center; background-size: auto; background-repeat: no-repeat;">
+    <table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; background-image: url(${cardBg}); background-position: top center; background-size: auto; background-repeat: no-repeat;">
       <tbody>
         <tr>
           <td>
@@ -130,22 +130,22 @@ export default function App() {
               <tbody>
                 <tr>
                   <td>
-                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 480px;" width="480">
+                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 450px;" width="450">
                       <tbody>
                         <tr>
                           <td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
                             <table class="heading_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                               <tr>
                                 <td class="pad" style="text-align:center;width:100%;padding-top:60px;">
-                                  <h1 style="margin: 0; color: #031900; direction: ltr; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder">Parabéns pelos resultados !</span></h1>
+                                  <h1 style="margin: 0; color:#003c3b ; direction: ltr; font-family: Helvetica, Helvetica Neue, Helvetica, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder">${titulo}</span></h1>
                                 </td>
                               </tr>
                             </table>
                             <table class="paragraph_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
                               <tr>
                                 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:center;mso-line-height-alt:19.2px;">
-                                    <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac pharetra turpis. Nunc nec euismod justo, a porttitor ligula. Nam volutpat vestibulum eleifend. Mauris non ex aliquam dui viverra tincidunt. Cras nibh est, sollicitudin at enim non, viverra porttitor elit. Sed posuere lorem convallis neque sagittis commodo.</p>
+                                  <div style="color:#003c3b;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:justify;mso-line-height-alt:19.2px;">
+                                    <p style="margin: 0;">${message}</p>
                                   </div>
                                 </td>
                               </tr>
@@ -153,8 +153,8 @@ export default function App() {
                             <table class="paragraph_block block-5" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
                               <tr>
                                 <td class="pad">
-                                  <div style="color:#031900;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:16.8px;">
-                                    <p style="margin: 0;">&nbsp; &nbsp; &nbsp;Abraços, Andrei da Manual!&nbsp;</p>
+                                  <div style="color:#003c3b;direction:ltr;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:15px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:16.8px;">
+                                    <p style="margin: 0;">&nbsp; &nbsp; &nbsp;Abraços, ${fromName} da Manual!&nbsp;</p>
                                   </div>
                                 </td>
                               </tr>
@@ -178,7 +178,7 @@ export default function App() {
               <tbody>
                 <tr>
                   <td>
-                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 480px;" width="480">
+                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 0; color: #000000; width: 450px;" width="450">
                       <tbody>
                         <tr>
                           <td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
@@ -195,7 +195,7 @@ export default function App() {
               <tbody>
                 <tr>
                   <td>
-                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 480px;" width="480">
+                    <table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 450px;" width="450">
                       <tbody>
                         <tr>
                           <td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
@@ -210,8 +210,7 @@ export default function App() {
                                         <table class="icons-inner" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;" cellpadding="0" cellspacing="0" role="presentation">
                                           <!--<![endif]-->
                                           <tr>
-                                            <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/" target="_blank" style="text-decoration: none;"><img class="icon" alt="Designed with BEE" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/53601_510656/Signature/bee.png" height="32" width="34" align="center" style="display: block; height: auto; margin: 0 auto; border: 0;"></a></td>
-                                            <td style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/" target="_blank" style="color: #9d9d9d; text-decoration: none;">Designed with BEE</a></td>
+                                            <td style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/" target="_blank" style="color: #9d9d9d; text-decoration: none;"></a></td>
                                           </tr>
                                         </table>
                                       </td>
@@ -234,7 +233,7 @@ export default function App() {
     </table><!-- End -->
   </body>
   
-  </html>`
+  `
 
   }
 
