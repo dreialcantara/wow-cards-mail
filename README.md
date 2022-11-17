@@ -6,6 +6,7 @@ A project to Manual CX Team use.
 - ``CSS``
 - ``JAVASCRIPT``
 - ``REACT``
+- ``BOOTSTRAP``
 
 ## 💻API USED 
 
