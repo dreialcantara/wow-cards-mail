@@ -7,6 +7,14 @@ A project to Manual CX Team use.
 - ``JAVASCRIPT``
 - ``REACT``
 
-#Project created using Create-React-App - run the command "npm start".
+## 💻API USED 
 
-#Project deployment is available at https://wow-cards-form.vercel.app/
+- ``EMAIJS (https://www.emailjs.com/)``
+
+
+### Project created using Create-React-App - run the command "npm start".
+
+### Project deployment is available at https://wow-cards-form.vercel.app/
+
+
+
