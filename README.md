@@ -8,7 +8,7 @@ A project to Manual CX Team use.
 - ``REACT``
 - ``BOOTSTRAP``
 
-## 💻E-MAIL LIB USED 
+## 💻E-MAIL API USED 
 
 - ``EMAIJS (https://www.emailjs.com/)``
 
